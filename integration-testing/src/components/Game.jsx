@@ -5,10 +5,10 @@ import Result from './Result'
 
 const Game = () => {
   const [state, setState] = useState({
-    compSelection:null,
-    playerSelection:null,
-    status:'Waiting',
-    cheating:false
+    compSelection: null,
+    playerSelection: null,
+    status: 'Waiting',
+    cheating: false
   });
   
   return (
