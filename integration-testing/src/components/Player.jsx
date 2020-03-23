@@ -37,7 +37,7 @@ const Player = (props) => {
 
   const registerPlayerItem = (value, updater) => {
     return updater(prevState => ({ ...prevState, playerSelection: value }));
-  }
+  };
 
   return (
     <section className="player">
