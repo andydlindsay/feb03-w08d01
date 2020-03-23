@@ -86,4 +86,4 @@ Notes and example app based on [Francis' lecture](https://github.com/FrancisBour
 * [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro)
 * [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 * [Which query should I use?](https://testing-library.com/docs/guide-which-query)
-* [Jest-DOM](https://github.com/testing-library/jest
+* [Jest-DOM](https://github.com/testing-library/jest-dom)
