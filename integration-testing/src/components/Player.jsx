@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { announceResult } from '../helpers/helpers';
 
 const Player = (props) => {
-  const {playerSelection, compSelection} = props.state;
+  const {playerSelection, compSelection, cheating} = props.state;
   const {setState} = props;
   const options = [
     ['Moai', '🗿'],
@@ -16,6 +16,13 @@ const Player = (props) => {
       setState(prevState => ({ ...prevState, status }));
     }
   }, [playerSelection, compSelection, setState]);
+
+  useEffect(() => {
+    if (playerSelection) {
+        const compSelection = 'Moai';
+        setState(prevState => ({ ...prevState, compSelection }));
+    }
+  }, [playerSelection, cheating]);
 
   const handleClick = () => {
     return setState(prevState => (
