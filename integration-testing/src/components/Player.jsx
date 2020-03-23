@@ -25,8 +25,7 @@ const Player = (props) => {
   }, [playerSelection, cheating]);
 
   const handleClick = () => {
-    return setState(prevState => (
-      {
+    return setState(prevState => ({
         ...prevState,
         playerSelection: null,
         compSelection: null,
