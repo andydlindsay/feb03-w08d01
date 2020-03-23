@@ -1,9 +1,13 @@
 import React from 'react';
+import { statusCheck } from '../helpers/helpers';
 
-const Result = () => {
+const Result = (props) => {
+  const { status } = props;
+  const message = statusCheck(status);
+  
   return(
     <footer data-testid="result_footer">
-      <h2>Waiting for your choice!</h2>
+      <h2>{ message }</h2>
     </footer>
   );
 }

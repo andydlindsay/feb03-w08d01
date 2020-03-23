@@ -1,11 +1,11 @@
 # W8D1 - Unit & Integration Testing
 
 ### To Do
-- [ ] Review: Different types of testing
-- [ ] Review: Test-Driven Development
-- [ ] Considerations when writing tests
-- [ ] Tools for testing React
-- [ ] Add Features to App Following TDD
+- [x] Review: Different types of testing
+- [x] Review: Test-Driven Development
+- [x] Considerations when writing tests
+- [x] Tools for testing React
+- [x] Add Features to App Following TDD
 
 ### Review of Types of Testing
 - static: linter, eslint, syntax highlighting, cheap
@@ -37,12 +37,12 @@
   - cover as many possibilities as we can consider
 
 ### Unit Testing
-- make the computer make a choice (instead of hardcoded value)
-- create a string (aka message) for the player based on the game result
+- [x] make the computer make a choice (instead of hardcoded value)
+- [x] create a string (aka message) for the player based on the game result
 
 ### Integration Testing
-- toggle the `cheating` state when user clicks on robot head icon
-- render the result message for the user based on `status`
+- [x] toggle the `cheating` state when user clicks on robot head icon
+- [x] render the result message for the user based on `status`
 
 
 

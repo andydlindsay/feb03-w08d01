@@ -1,4 +1,4 @@
-import { announceResult } from '../helpers'
+import { announceResult, cpuChoice, statusCheck } from '../helpers'
 
 let fakeState;
 
@@ -32,5 +32,45 @@ describe('announceResult function', () => {
 
   test('returns "Waiting" if nothing is passed in', () => {
     expect(announceResult()).toBe('Waiting');
+  });
+});
+
+describe('cpuChoice function', () => {
+  test('given the player choice and cheating is true, returns the winning choice', () => {
+    const cheating = true;
+
+    fakeState.playerSelection = 'Tree';
+    let result = cpuChoice(fakeState.playerSelection, cheating);
+    expect(result).toBe('Axe');
+
+    fakeState.playerSelection = 'Moai';
+    result = cpuChoice(fakeState.playerSelection, cheating);
+    expect(result).toBe('Tree');
+
+    fakeState.playerSelection = 'Axe';
+    result = cpuChoice(fakeState.playerSelection, cheating);
+    expect(result).toBe('Moai');
+  });
+
+  test('if cheating is false, returns a random choice', () => {
+    const cheating = false;
+    const options = ['Axe', 'Tree', 'Moai'];
+
+    let result = cpuChoice('', cheating);
+    expect(options.includes(result)).toBeTruthy();
+  });
+});
+
+describe('statusCheck function', () => {
+  test('retuns the correct message based on status', () => {
+    const win = statusCheck('Won');
+    const loss = statusCheck('Lost');
+    const tie = statusCheck('Tied');
+    const waiting = statusCheck('Waiting');
+
+    expect(win).toEqual('You won!');
+    expect(loss).toEqual('You lost!');
+    expect(tie).toEqual('You tied!');
+    expect(waiting).toEqual('Waiting for your choice!');
   });
 });
