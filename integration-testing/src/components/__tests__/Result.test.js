@@ -1,9 +1,8 @@
-import React from 'react'
-import { render, getByTestId } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
-import Result from '../Result'
+import React from 'react';
+import { render, getByTestId } from '@testing-library/react';
+import Result from '../Result';
 
-test('Shows appropriate message when the status is "Waiting"', () => {
+test('shows appropriate message when the status is "Waiting"', () => {
   const fakeState = {
     compSelection: null,
     playerSelection: null,
